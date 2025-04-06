@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  MONGO_DB: "testing"
+  ME_CONFIG_BASICAUTH: "false"
+  ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
+  mongod.conf: |
+    security:
+      authorization: enabled
